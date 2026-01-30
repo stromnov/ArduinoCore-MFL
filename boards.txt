@@ -43,6 +43,16 @@ gd_gd32f30x.menu.pnum.MFL_AQUILA.build.product_line=GD32F30X_HD
 gd_gd32f30x.menu.pnum.MFL_AQUILA.build.variant=MFL_AQUILA
 gd_gd32f30x.menu.pnum.MFL_AQUILA.upload.openocd_script=target/gd32f3x.cfg
 
+# Anycubic Kobra 2 Neo GD32F303RG
+gd_gd32f30x.menu.pnum.MFL_AC_TRI=Anycubic GD32F303RG
+gd_gd32f30x.menu.pnum.MFL_AC_TRI.upload.maximum_size=524288
+gd_gd32f30x.menu.pnum.MFL_AC_TRI.upload.maximum_data_size=98304
+gd_gd32f30x.menu.pnum.MFL_AC_TRI.build.board=mfl_ac_tri
+gd_gd32f30x.menu.pnum.MFL_AC_TRI.build.series=GD32F30x
+gd_gd32f30x.menu.pnum.MFL_AC_TRI.build.product_line=GD32F30X_HD
+gd_gd32f30x.menu.pnum.MFL_AC_TRI.build.variant=MFL_AC_TRI
+gd_gd32f30x.menu.pnum.MFL_AC_TRI.upload.openocd_script=target/gd32f3x.cfg
+
 # Optimizations
 gd_gd32f30x.menu.opt.osstd=Smallest (-Os default)
 gd_gd32f30x.menu.opt.o1std=Fast (-O1)
