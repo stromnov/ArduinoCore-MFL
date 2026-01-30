@@ -16,11 +16,12 @@ namespace mcu {
     struct F103RC {};
     struct F303RE {};
     struct F303RC {};
+    struct F303RG {};
 
     using ChipSeries =
     #if defined(GD32F103RE) || defined(GD32F103RC)
         F103R;
-    #elif defined(GD32F303RE) || defined(GD32F303RC)
+    #elif defined(GD32F303RE) || defined(GD32F303RC) || defined(GD32F303RG)
         F303R;
     #else
         #error Unsupported mcu series!
@@ -35,6 +36,8 @@ namespace mcu {
         F303RE;
     #elif defined(GD32F303RC)
         F303RC;
+    #elif defined(GD32F303RG)
+        F303RG;
     #else
         #error Unsupported mcu variant!
     #endif
@@ -154,7 +157,7 @@ typedef enum IRQn {
 
     #include <core_cm3.h>
 #endif
-#if defined(GD32F303RE) || defined(GD32F303RC)
+#if defined(GD32F303RE) || defined(GD32F303RC) || defined(GD32F303RG)
     //////////////////////////////////////// NOTICE ////////////////////////////////////////
     //  Some early batches of this chip shipped without an FPU/MPU.
     //  If you experience issues, you may need to disable these features.
