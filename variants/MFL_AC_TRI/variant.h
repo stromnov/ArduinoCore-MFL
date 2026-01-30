@@ -89,18 +89,6 @@
 #define MAX_PIN_NUM         (ADC_VREF)
 #define INVALID_PIN_NUMBER  (ADC_VREF + 1)
 
-// On-board LED pin number
-#ifndef LED_BUILTIN
-    #define LED_BUILTIN PB11
-#endif
-
-#define LED_GREEN   LED_BUILTIN
-
-// On board user button
-#ifndef USER_BTN
-    #define USER_BTN    PC13
-#endif
-
 #ifndef ADC_CHANNEL_TEMPSENSOR
     #define ADC_CHANNEL_TEMPSENSOR  16
 #endif
@@ -108,65 +96,21 @@
     #define ADC_CHANNEL_VREFINT     17
 #endif
 
-//
-// SPI
-//
-// Each define will create a global instance
-// Leave undefined to call your own
-//
-#define BOARD_USE_SPI0
-//#define BOARD_USE_SPI1
-//#define BOARD_USE_SPI2
-
-// SPI0
-#define PIN_SPI_SS      PA4
-#define PIN_SPI_MOSI    PA7
-#define PIN_SPI_MISO    PA6
-#define PIN_SPI_SCK     PA5
-
-// SPI1
-#define PIN_SPI1_SS     PB12
-#define PIN_SPI1_MOSI   PB15
-#define PIN_SPI1_MISO   PB14
-#define PIN_SPI1_SCK    PB13
-
-// SPI2
-#define PIN_SPI2_SS     PA15
-#define PIN_SPI2_MOSI   PB5
-#define PIN_SPI2_MISO   PB4
-#define PIN_SPI2_SCK    PB3
-
-//
-// I2C
-//
-// Each define will create a global instance
-// Leave undefined to call your own
-//
-#define BOARD_USE_I2C0
-//#define BOARD_USE_I2C1
-
-// I2C0
-#define PIN_WIRE_SDA    PB7
-#define PIN_WIRE_SCL    PB6
-
-// I2C1
-#define PIN_WIRE1_SDA   PB11
-#define PIN_WIRE1_SCL   PB10
 
 // Timer
 #ifndef TIMER_TONE
-    #define TIMER_TONE  2  // TIMER_TONE must be defined in this file
+    #define TIMER_TONE  3  // TIMER_TONE must be defined in this file
 #endif
 #ifndef TIMER_SERVO
-    #define TIMER_SERVO 1  // TIMER_SERVO must be defined in this file
+    #define TIMER_SERVO 2  // TIMER_SERVO must be defined in this file
 #endif
 
 // Default U(S)ARTx Serial number (0-4)
-#define DEFAULT_HARDWARE_SERIAL 0
+#define DEFAULT_HARDWARE_SERIAL 1
 
 // Serial
-#define PIN_SERIAL_RX   PA10
-#define PIN_SERIAL_TX   PA9
+#define PIN_SERIAL_RX   PA3
+#define PIN_SERIAL_TX   PA2
 
 #ifndef PWM_FREQUENCY
     #define PWM_FREQUENCY       1000
@@ -197,10 +141,10 @@
     // SERIAL_PORT_HARDWARE_OPEN  Hardware serial ports which are open for use.  Their RX & TX
     //                            pins are NOT connected to anything by default.
     #ifndef SERIAL_PORT_MONITOR
-        #define SERIAL_PORT_MONITOR   Serial
+        #define SERIAL_PORT_MONITOR   Serial1
     #endif
     #ifndef SERIAL_PORT_HARDWARE
-        #define SERIAL_PORT_HARDWARE  Serial0
+        #define SERIAL_PORT_HARDWARE  Serial1
     #endif
 
     // Ultra-compact port/pin pair structure
